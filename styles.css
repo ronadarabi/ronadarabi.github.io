@@ -1,0 +1,574 @@
+@font-face {
+  font-family: "Melodrame";
+  src: url("fonts/Relationship of mélodrame.woff")
+    format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("./fonts/CreatoDisplay-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("./fonts/CreatoDisplay-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("./fonts/CreatoDisplay-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --background: #F5F4F0;
+  --text: #000000;
+  --pink: #B992AB;
+  --gray: #888888;
+
+  --display-font: "Melodrame", Georgia, serif;
+  --body-font: "Creato Display", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--body-font);
+  font-size: 16px;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--pink);
+}
+
+
+.home {
+  position: relative;
+  width: 1280px;
+  height: 1119px;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+
+  transform: scale(calc(100vw / 1280px));
+  transform-origin: top left;
+}
+
+/* Images */
+
+.imgs {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.img {
+  position: absolute;
+  display: block;
+  object-fit: contain;
+}
+
+.logo {
+  width: 698px;
+  height: 732px;
+  left: 582px;
+  top: 105px;
+}
+
+.bottom-right {
+  width: 375px;
+  height: 406px;
+  left: 917px;
+  top: 729px;
+}
+
+.bottom-left {
+  width: 301px;
+  height: 303px;
+  left: 0;
+  top: 816px;
+}
+
+.bottom-middle {
+  width: 185px;
+  height: 94px;
+  left: 625px;
+  top: 1026px;
+}
+
+.circle {
+  width: 60px;
+  height: 54px;
+  left: 68px;
+  top: 130px;
+}
+
+.farsi {
+  width: 76px;
+  height: 117px;
+  left: 560px;
+  top: 56px;
+}
+
+/* Keep content above decoration layers */
+
+header,
+.intro,
+.publications,
+.for-fun,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Name */
+
+.name h1 {
+  position: absolute;
+  font-family: var(--display-font);
+  font-size: 118.5px;
+  font-weight: 400;
+  line-height: 120px;
+  white-space: nowrap;
+}
+
+#first-name {
+  left: 41px;
+  top: 12px;
+}
+
+#last-name {
+  left: 161px;
+  top: 70px;
+}
+
+/* Navigation */
+
+nav {
+  position: absolute;
+  top: 46px;
+  right: 60px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+nav a {
+  transition: color 0.2s ease;
+}
+
+/* Bio */
+
+.intro {
+  position: absolute;
+  top: 208px;
+  left: 99px;
+  width: 466px;
+}
+
+#bio {
+  font-family: "Creato Display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: justify;
+}
+
+/* Publications */
+
+.publications {
+  position: absolute;
+  left: 57px;
+  top: 335px;
+  width: 454px;
+}
+
+.publications h2,
+.for-fun h2 {
+  font-family: var(--display-font);
+  font-size: 59.25px;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+.publications h2 {
+  margin-bottom: 16px;
+}
+
+.pdf-link { 
+    color:var(--gray);
+}
+
+.pdf-link:hover{ 
+    color: var(--pink);
+}
+
+
+.publication {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 402px;
+  margin-left: 52px;
+}
+
+.publication .plus {
+  flex-shrink: 0;
+  width: 9px;
+  line-height: 19px;
+  font-size: 16px;
+}
+
+.publication > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.publication h3 {
+  font-family: "Creato Display", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 6px;
+}
+
+.publication .authors {
+  font-family: "Creato Display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--pink);
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 6px;
+}
+
+.publication .publisher {
+  font-family: "Creato Display", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--gray);
+  font-size: 12px;
+  line-height: 14px;
+}
+
+
+#p-1 {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--pink);
+}
+
+#p-2 {
+  margin-top: 24px;
+}
+
+/* For Fun  */
+
+.for-fun {
+  position: absolute;
+  top: 741px;
+  left: 209px;
+}
+
+.for-fun h2 {
+  margin-bottom: 16px;
+}
+
+.for-fun p {
+  position: relative;
+  width: max-content;
+  max-width: 440px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.for-fun p::before {
+  content: ">> ";
+}
+
+.fun-1 {
+  margin-left: 52px;
+  margin-bottom: 14px;
+}
+
+.fun-2 {
+  margin-left: 135px;
+  margin-bottom: 14px;
+}
+
+.fun-3 {
+  margin-left: 218px;
+}
+
+/* Footer  */
+
+footer {
+  position: absolute;
+  left: 249px;
+  top: 1087px;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--gray);
+}
+
+/* Responsive layout */
+
+@media (max-width: 1100px) {
+
+  .home {
+    min-height: 100vh;
+    padding: 28px 6% 60px;
+    overflow: hidden;
+  }
+
+  header {
+    min-height: 210px;
+  }
+
+  .name h1 {
+    font-size: clamp(70px, 10vw, 105px);
+    line-height: 1;
+  }
+
+  #first-name {
+    left: 0;
+    top: 30px;
+  }
+
+  #last-name {
+    left: 90px;
+    top: 100px;
+  }
+
+  nav {
+    top: 0;
+    right: 0;
+  }
+
+  .intro,
+  .publications,
+  .for-fun,
+  footer {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  .intro {
+    max-width: 466px;
+    width: 100%;
+    margin-bottom: 64px;
+  }
+
+  .publications {
+    width: 100%;
+    max-width: 454px;
+    margin-bottom: 64px;
+  }
+
+  .publication {
+    width: calc(100% - 35px);
+    margin-left: 35px;
+  }
+
+  .for-fun {
+    margin-bottom: 160px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+
+  /* Images */
+
+  .logo {
+    width: 45vw;
+    height: auto;
+    left: auto;
+    right: -8vw;
+    top: 130px;
+  }
+
+  .circle {
+    width: 48px;
+    height: auto;
+    left: 30px;
+    top: 130px;
+  }
+
+  .farsi {
+    width: 60px;
+    height: auto;
+    left: auto;
+    right: 15%;
+    top: 40px;
+  }
+
+  .bottom-left {
+    width: 180px;
+    height: auto;
+    left: -40px;
+    top: auto;
+    bottom: 0;
+  }
+
+  .bottom-right {
+    width: 210px;
+    height: auto;
+    left: auto;
+    right: -65px;
+    top: auto;
+    bottom: 0;
+  }
+
+  .bottom-middle {
+    width: 120px;
+    height: auto;
+    left: 50%;
+    top: auto;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+}
+
+/* Phone */
+
+@media (max-width: 600px) {
+
+  .home {
+    padding: 20px 24px 48px;
+  }
+
+  header {
+    min-height: 190px;
+  }
+
+  .name h1 {
+    font-size: clamp(62px, 15vw, 88px);
+  }
+
+  #first-name {
+    top: 45px;
+  }
+
+  #last-name {
+    top: 103px;
+    left: 72px;
+  }
+
+  nav {
+    gap: 18px;
+    font-size: 14px;
+  }
+
+  .intro {
+    margin-bottom: 56px;
+  }
+
+  #bio {
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  .publications h2,
+  .for-fun h2 {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+
+  .publications h2 {
+    margin-bottom: 24px;
+  }
+
+  .publication {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .publication h3,
+  .publication .authors {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .publication .publisher {
+    font-size: 11px;
+  }
+
+  .for-fun p {
+    width: auto;
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .fun-1,
+  .fun-2,
+  .fun-3 {
+    margin-left: 0;
+    margin-bottom: 12px;
+  }
+
+  .for-fun {
+    margin-bottom: 200px;
+  }
+
+  .logo {
+    width: 58vw;
+    right: -20vw;
+    top: 290px;
+    opacity: 0.25;
+  }
+
+  .farsi {
+    width: 42px;
+    top: 110px;
+    right: 4%;
+  }
+
+  .circle {
+    width: 36px;
+    top: 130px;
+    left: 10px;
+  }
+
+  footer {
+    max-width: 250px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
