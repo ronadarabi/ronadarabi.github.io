@@ -92,7 +92,7 @@ a:hover {
 }
 
 .img {
-  position: absolute;
+  position: fixed;
   display: block;
   object-fit: contain;
 }
@@ -100,29 +100,23 @@ a:hover {
 .logo {
   width: 698px;
   height: 732px;
-  left: 582px;
-  top: 105px;
+  right: 0;
+  top: 5rem;
 }
 
-.bottom-right {
-  width: 375px;
-  height: 406px;
-  left: 917px;
-  top: 729px;
-}
 
 .bottom-left {
   width: 301px;
   height: 303px;
   left: 0;
-  top: 816px;
+  bottom: 0;
 }
 
 .bottom-middle {
+  bottom: .5rem; 
+  right: 30rem;
   width: 185px;
   height: 94px;
-  left: 625px;
-  top: 1026px;
 }
 
 .circle {
@@ -295,50 +289,13 @@ nav a {
   margin-top: 24px;
 }
 
-/* For Fun  */
-
-.for-fun {
-  position: absolute;
-  top: 741px;
-  left: 209px;
-}
-
-.for-fun h2 {
-  margin-bottom: 16px;
-}
-
-.for-fun p {
-  position: relative;
-  width: max-content;
-  max-width: 440px;
-  font-size: 16px;
-  line-height: 19px;
-}
-
-.for-fun p::before {
-  content: ">> ";
-}
-
-.fun-1 {
-  margin-left: 52px;
-  margin-bottom: 14px;
-}
-
-.fun-2 {
-  margin-left: 135px;
-  margin-bottom: 14px;
-}
-
-.fun-3 {
-  margin-left: 218px;
-}
-
 /* Footer  */
 
 footer {
-  position: absolute;
-  left: 249px;
-  top: 1087px;
+  position: fixed;
+  bottom: 1.5rem; 
+  right: 1.5rem;
+  z-index: 1000;
   font-size: 16px;
   line-height: 19px;
   color: var(--gray);
@@ -441,15 +398,6 @@ footer {
     width: 180px;
     height: auto;
     left: -40px;
-    top: auto;
-    bottom: 0;
-  }
-
-  .bottom-right {
-    width: 210px;
-    height: auto;
-    left: auto;
-    right: -65px;
     top: auto;
     bottom: 0;
   }
