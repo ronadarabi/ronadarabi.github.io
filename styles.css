@@ -237,15 +237,6 @@ nav a {
   margin-bottom: 16px;
 }
 
-.pdf-link { 
-    color:var(--gray);
-}
-
-.pdf-link:hover{ 
-    color: var(--pink);
-}
-
-
 .publication {
   position: relative;
   display: flex;
@@ -293,6 +284,15 @@ nav a {
   color: var(--gray);
   font-size: 12px;
   line-height: 14px;
+}
+
+.pdf-link { 
+    color:var(--gray);
+    font-weight: 400;
+}
+
+.pdf-link:hover{ 
+    color: var(--pink);
 }
 
 
