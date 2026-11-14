@@ -111,7 +111,6 @@ a:hover {
   top: 5rem;
 }
 
-
 .bottom-left {
   width: 203px;
   height: 205px;
@@ -131,13 +130,6 @@ a:hover {
   height: 54px;
   left: 68px;
   top: 130px;
-}
-
-.farsi {
-  width: 76px;
-  height: 117px;
-  left: 560px;
-  top: 56px;
 }
 
 /* Keep content above decoration layers */
@@ -309,10 +301,10 @@ nav a {
 
 footer {
   position: fixed;
-  bottom: 1.5rem; 
-  right: 1.5rem;
+  bottom: 1rem; 
+  right: 1rem;
   z-index: 1000;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 19px;
   color: var(--gray);
 }
